@@ -1,5 +1,5 @@
 (function () {
-  alert('NBA-CDN IMPORTED OK')
+  console.log('NBA-CDN IMPORTED OK')
 })();
 
 function nbaActionsClick(arg) {
