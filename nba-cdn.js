@@ -20,7 +20,7 @@ function nbaActionsLater(arg) {
 
 // XTRA FUNCTIONS
 
-function nbaSubscriptionURL(arg) {
-  alert(arg);
+function nbaRedirectToAllSubscriptions(arg) {
+  //alert(arg);
   window.location.assign('https://nettbutikk.telia.no/mobilabonnement/smart')
 }
