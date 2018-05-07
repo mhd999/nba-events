@@ -22,4 +22,5 @@ function nbaActionsLater(arg) {
 
 function nbaSubscriptionURL(arg) {
   alert(arg);
+  window.location.assign('https://nettbutikk.telia.no/mobilabonnement/smart')
 }
