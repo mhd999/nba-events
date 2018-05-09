@@ -2,6 +2,8 @@
   console.log('NBA-CDN IMPORTED OK')
 })();
 
+
+
 function nbaActionsClick(arg) {
   alert(arg);
   // document.getElementsByClassName('nba-container')[0].style.display = 'none';
@@ -36,9 +38,35 @@ function nbaActionsLater(arg) {
 }
 
 
-// XTRA FUNCTIONS
+
+
+
+// XTRA SUBCRICTION OFFER FUNCTIONS
 
 function nbaRedirectToAllSubscriptions(arg) {
-  //alert(arg);
-  window.location.assign('https://nettbutikk.telia.no/mobilabonnement/smart')
+  // alert(arg);
+  // window.location.assign('https://beta.telia.no/')
+}
+
+function nbaBoxExpanding(arg) {  
+  var getSubscriptionExpandBox = document.getElementsByClassName('box--expandable')[0];
+  var getNbaGrid = document.getElementsByClassName('nba-content__grid')[0];
+  // alert ('EXPANDING')
+
+  getSubscriptionExpandBox.classList.add('box--is-expanded');
+  getSubscriptionExpandBox.removeAttribute('onclick');
+  getNbaGrid.setAttribute("style", "display: block;");
+}
+
+function nbaBoxCollapsing(arg) {
+  var getSubscriptionExpandBox = document.getElementsByClassName('box--expandable')[0];
+  var getSubscriptionCollapseBox = document.getElementsByClassName('box__close-expanded-info')[0];
+  var getNbaGrid = document.getElementsByClassName('nba-content__grid')[0];
+  // alert('COLLAPSING');
+
+  getSubscriptionExpandBox.classList.remove('box--is-expanded');
+  getNbaGrid.removeAttribute("style", "display: block;");
+  setTimeout(() => {
+    getSubscriptionExpandBox.setAttribute('onclick', 'nbaBoxExpanding()');
+  }, 500);
 }
