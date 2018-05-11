@@ -3,49 +3,83 @@
 })();
 
 
+console.log()
+
+
+
+/* CLICK ACTION */
 
 function nbaActionsClick(arg) {
   alert(arg);
   // document.getElementsByClassName('nba-container')[0].style.display = 'none';
   
-//   var host = 'http://localhost:8080'; 
-//   var url = '/api/interaction/e3ef5c0e-6c1e-4c39-9b3e-b5b5b8f72cce/click';
+  var url = arg;
+  
+  /* POST CLICK ACTION BACK TO OFFERHUB */
+  var XHR = new XMLHttpRequest();
 
-//   var XHR = new XMLHttpRequest();
+  XHR.onreadystatechange = function() {
+    if(XHR.readyState == 4) {
+      if(XHR.status == 200) {
+        console.log('POST CLICK SUCCESS!');
+      } else {
+        console.log('ERROR')
+      }
+    }
+  }
 
-//   XHR.onreadystatechange = function() {
-//     if(XHR.readyState == 4) {
-//       if(XHR.status == 200) {
-//         // console.log('SUCCESS!');
-//       } else {
-//         console.log('ERROR')
-//       }
-//     }
-//   }
-
-//   XHR.open('POST', host + url);
-//   XHR.send();
+  XHR.open('POST', url);
+  XHR.send();
 }
+
+
+
+/* REJECT ACTION */
 
 function nbaActionsReject(arg) {
   alert(arg);
   // document.getElementsByClassName('nba-container')[0].style.display = 'none';
+
+  var url = arg;
+  console.log(url)
+  
+  /* POST REJECT ACTION BACK TO OFFERHUB */
+  // var XHR = new XMLHttpRequest();
+
+  // XHR.onreadystatechange = function() {
+  //   if(XHR.readyState == 4) {
+  //     if(XHR.status == 200) {
+  //       console.log('POST CLICK SUCCESS!');
+  //     } else {
+  //       console.log('ERROR')
+  //     }
+  //   }
+  // }
+
+  // XHR.open('POST', url);
+  // XHR.send();
 }
+
+
+
+/* LATER ACTION */
 
 function nbaActionsLater(arg) {
   alert(arg);
-  // document.getElementsByClassName('nba-container')[0].style.display = 'none';
+  document.getElementsByClassName('nba-container')[0].style.display = 'none';
 }
 
 
+
+/*--------------------------------------------------------------------*/
 
 
 
 // XTRA SUBCRICTION OFFER FUNCTIONS
 
-function nbaRedirectToAllSubscriptions(arg) {
+function nbaRedirectToSubscription(url) {
   // alert(arg);
-  // window.location.assign('https://beta.telia.no/')
+  window.location.assign(url)
 }
 
 function nbaBoxExpanding(arg) {  
@@ -70,3 +104,4 @@ function nbaBoxCollapsing(arg) {
     getSubscriptionExpandBox.setAttribute('onclick', 'nbaBoxExpanding()');
   }, 500);
 }
+
