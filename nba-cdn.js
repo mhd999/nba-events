@@ -100,7 +100,7 @@ function nbaBoxCollapsing(arg) {
 
   getSubscriptionExpandBox.classList.remove('box--is-expanded');
   getNbaGrid.removeAttribute("style", "display: block;");
-  setTimeout(() => {
+  setTimeout(function() {
     getSubscriptionExpandBox.setAttribute('onclick', 'nbaBoxExpanding()');
   }, 500);
 }
