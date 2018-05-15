@@ -1,3 +1,3 @@
-# nba-cdn
+# nba-events
 
-URL: https://rawgit.com/TeliaSoneraNorge/nba-cdn/master/nba-cdn.js
+URL: https://rawgit.com/TeliaSoneraNorge/nba-events/master/public/nba-events-compiled.js
