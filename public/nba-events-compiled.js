@@ -10,7 +10,7 @@
 
 function nbaActionsClick(arg) {
   alert(arg);
-  document.getElementsByClassName('nba-container')[0].style.display = 'none';
+  // document.getElementsByClassName('nba-container')[0].style.display = 'none';
   document.getElementsByClassName('nba-container')[0].style.cursor = 'wait';
   
   var url = arg;
