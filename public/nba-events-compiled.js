@@ -3,20 +3,20 @@
 })();
 
 
-/* API CALL */
+
 
 
 /* CLICK ACTION */
 
 function nbaActionsClick(arg) {
-  // alert(arg);
-  // document.getElementsByClassName('nba-container')[0].style.display = 'none';
+  alert(arg);
+  document.getElementsByClassName('nba-container')[0].style.display = 'none';
   document.getElementsByClassName('nba-container')[0].style.cursor = 'wait';
   
   var url = arg;
   
   /* POST CLICK ACTION BACK TO OFFERHUB */
-  var XHR = new XMLHttpRequest();
+  // var XHR = new XMLHttpRequest();
 
   // XHR.onreadystatechange = function() {
   //   if(XHR.readyState == 4) {
@@ -37,7 +37,7 @@ function nbaActionsClick(arg) {
 /* REJECT ACTION */
 
 function nbaActionsReject(arg) {
-  // alert(arg);
+  alert(arg);
   document.getElementsByClassName('nba-container')[0].style.display = 'none';
 
   var url = arg;
@@ -65,7 +65,7 @@ function nbaActionsReject(arg) {
 /* LATER ACTION */
 
 function nbaActionsLater(arg) {
-  // alert(arg);
+  alert(arg);
   document.getElementsByClassName('nba-container')[0].style.display = 'none';
 }
 
@@ -77,7 +77,7 @@ function nbaActionsLater(arg) {
 
 // XTRA SUBCRICTION OFFER FUNCTIONS
 
-function nbaRedirectToSubscription(url) {
-  // alert(arg);
-  window.location.assign(url)
-}
+// function nbaRedirectToSubscription(url) {
+//   // alert(arg);
+//   window.location.assign(url)
+// }
