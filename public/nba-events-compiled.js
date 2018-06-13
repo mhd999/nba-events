@@ -16,20 +16,20 @@ function nbaActionsClick(arg) {
   var url = arg;
   
   /* POST CLICK ACTION BACK TO OFFERHUB */
-  // var XHR = new XMLHttpRequest();
+  var XHR = new XMLHttpRequest();
 
-  // XHR.onreadystatechange = function() {
-  //   if(XHR.readyState == 4) {
-  //     if(XHR.status == 200) {
-  //       console.log('POST CLICK SUCCESS!');
-  //     } else {
-  //       console.log('ERROR')
-  //     }
-  //   }
-  // }
+  XHR.onreadystatechange = function() {
+    if(XHR.readyState == 4) {
+      if(XHR.status == 200) {
+        console.log('POST CLICK SUCCESS!');
+      } else {
+        console.log('ERROR')
+      }
+    }
+  }
 
-  // XHR.open('POST', url);
-  // XHR.send();
+  XHR.open('POST', url);
+  XHR.send();
 }
 
 
