@@ -49,7 +49,7 @@ function nbaActionsReject(arg) {
   XHR.onreadystatechange = function() {
     if(XHR.readyState == 4) {
       if(XHR.status == 200) {
-        console.log('POST CLICK SUCCESS!');
+        console.log('POST REJECT SUCCESS!');
       } else {
         console.log('ERROR')
       }
