@@ -5,7 +5,6 @@
 
 
 
-
 /* CLICK ACTION */
 
 function nbaActionsClick(arg) {
