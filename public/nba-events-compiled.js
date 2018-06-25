@@ -14,6 +14,7 @@ function nbaActionsClick(arg) {
   document.getElementsByClassName('nba-container')[0].style.cursor = 'wait';
   
   var url = arg;
+  console.log(url)
   
   /* POST CLICK ACTION BACK TO OFFERHUB */
   var XHR = new XMLHttpRequest();
