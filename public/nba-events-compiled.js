@@ -1,6 +1,6 @@
 (function () {
-  console.log('NBA-EVENTS Imported ok')
-})();
+  console.log('nbaImpOk')
+})(); 
 
 
 
@@ -9,7 +9,7 @@
 /* CLICK ACTION */
 
 function nbaActionsClick(arg) {
-  alert(arg);
+  // alert(arg);
   // document.getElementsByClassName('nba-container')[0].style.display = 'none';
   document.getElementsByClassName('nba-container')[0].style.cursor = 'wait';
   
@@ -37,27 +37,27 @@ function nbaActionsClick(arg) {
 /* REJECT ACTION */
 
 function nbaActionsReject(arg) {
-  alert(arg);
+  // alert(arg);
   document.getElementsByClassName('nba-container')[0].style.display = 'none';
 
   var url = arg;
   console.log(url)
   
   /* POST REJECT ACTION BACK TO OFFERHUB */
-  // var XHR = new XMLHttpRequest();
+  var XHR = new XMLHttpRequest();
 
-  // XHR.onreadystatechange = function() {
-  //   if(XHR.readyState == 4) {
-  //     if(XHR.status == 200) {
-  //       console.log('POST CLICK SUCCESS!');
-  //     } else {
-  //       console.log('ERROR')
-  //     }
-  //   }
-  // }
+  XHR.onreadystatechange = function() {
+    if(XHR.readyState == 4) {
+      if(XHR.status == 200) {
+        console.log('POST CLICK SUCCESS!');
+      } else {
+        console.log('ERROR')
+      }
+    }
+  }
 
-  // XHR.open('POST', url);
-  // XHR.send();
+  XHR.open('POST', url);
+  XHR.send();
 }
 
 
