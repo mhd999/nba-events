@@ -65,6 +65,6 @@ function nbaActionsReject(arg) {
 /* LATER ACTION */
 
 function nbaActionsLater(arg) {
-  alert(arg);
+  // alert(arg);
   document.getElementsByClassName('nba-container')[0].style.display = 'none';
 }
